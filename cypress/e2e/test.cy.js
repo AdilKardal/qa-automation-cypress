@@ -4,18 +4,18 @@ describe('Formulaire utilisateur', () => {
     cy.visit('https://example.cypress.io/commands/actions')
   })
 
-  it('remplit le formulaire correctement', () => {
+  it('remplit correctement', () => {
     cy.get('.action-email').type('adil@test.com')
-    cy.get('textarea').type('test QA',{force:true})
+   
+    cy.get('textarea').should('be.disabled')
 
     cy.get('[type="checkbox"]').first().check()
-     cy.get('[type="checkbox"]').first().uncheck()
 
     cy.get('.action-email').should('have.value', 'adil@test.com')
   })
 
-  it('refuse email invalide (simulation)', () => {
-    cy.get('.action-email').type('adil')
+  it('email invalide', () => {
+    cy.get('.action-email').clear().type('adil')
 
     cy.get('.action-email').should('have.value', 'adil')
   })
@@ -25,4 +25,5 @@ describe('Formulaire utilisateur', () => {
 
     cy.get('.action-email').should('have.value', '')
   })
+
 })
