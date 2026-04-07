@@ -19,9 +19,7 @@ L'objectif est de simuler des scénarios utilisateurs réels et de vérifier le 
 - ✔️ Interaction avec une checkbox
 - ✔️ Remplissage d’un formulaire 
 
----
-
-## 🔍 Exemple de test
+## Exemple de test
 
 ```javascript
 cy.get('.action-email').type('test@test.com')
