@@ -31,7 +31,7 @@ Tests réalisés sur un site de démonstration pour apprendre les bases :
 - vérification avec assertions (`should`)
 - gestion des sélecteurs CSS
 
-👉 Objectif : comprendre Cypress et l’automatisation
+ Objectif : comprendre Cypress et l’automatisation
 
 ---
 
